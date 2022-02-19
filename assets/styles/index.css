@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    color: var(--dark2);
+    text-align: center;
+    padding: 10px;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2.7rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.2rem;
+}
+:root{
+    --orange: #FF4C29;
+    --dark1: #082032;
+    --dark2: #2C394B;
+    --dark3: #334756;
+    --blue: #150E56;
+    --line: rgba(128, 128, 128, 0.200);
+    --shadow: rgba(80, 80, 80, 0.120);
+}
+#summary{
+    background: rgb(255, 255, 255);
+}
+.btn-add{
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 12px 20px;
+    margin-block-end: 10px;
+}
+.btn-add:hover{
+    box-shadow: 0 0 10px 0 var(--dark3);
+}
+header{
+    margin-block-end: 20px;
+    padding: 20px;
+    padding-bottom: 60px;
+    color: white;
+    background-image: url("../illus/Wave.svg");
+    background-position: 50% 15%;
+}
+header h2{
+    color: var(--dark2);
+}
+main{
+    padding: 0px 30px;
+}
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBox{
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+    display: flex;
+    gap: 30px;
+}
+.header_menu{
+    border-bottom: 7px solid var(--orange);
+}
+.subContent h3{
+    font-weight: 800;
+    color: var(--dark2);
+    padding: 4px 0;
+}
+.content{
+    color: var(--blue);
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    margin: 20px 0;
+    box-shadow: 0 0 10px 0 var(--shadow);
+    flex: 1;
+}
+.content h4{
+    font-weight: 600;
+    background: var(--dark2);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px; 
+}
+.t_content{
+    margin: 10px;
+    padding-block-end: 10px;
+}
+.t_content table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.t_content table tr th, td{
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--line);
+    color: var(--dark1);
+}
+.t_content table tr td:hover{
+    background: var(--shadow);
+    cursor: pointer;
+}
+.t_content table tr th{
+    font-weight: 800;
+}
+.t_content table tr td:nth-child(1){
+    font-weight: 800;
+}
+footer{
+    background: var(--dark2);
+    padding: 15px;
+    color: white;
+    display: absolute;
+    margin-top: 200px;
+}
+.footer_cont{
+    text-align: center;
+}
+.input_cont{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.589);
+    display: none;
+    /* display: flex; */
+    align-items: center;
+}
+.input_form{
+    width: 80%;
+    height: 730px;
+    margin-inline-start: 10%;
+    background: white;
+    padding: 30px 40px;
+    overflow: auto hidden;
+    border-radius: 10px;
+}
+.input_form h3{
+    padding-bottom: 10px;
+}
+.sub_input{
+    margin: 10px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--line);
+    padding-block-end: 10px;
+}
+.sub_input > p{
+    color: var(--blue);
+    margin-block-end: 13px;
+    font-weight: 800;
+}
+.sub_input input, select, textarea{
+    padding: 10px 14px;
+    padding-block-start: 12px;
+    border-radius: 5px;
+    background: rgba(214, 214, 214, 0.100);
+    border: 1px solid var(--line);
+    
+}
+.sub_input input[type=date]{
+    padding: 8px 14px;
+    padding-block-start: 9px;
+}
+.sub_input input:focus, select:focus{
+    outline: none;
+    border: 1px solid rgba(29, 130, 197, 0.603);
+}
+.flex{
+    display: flex;
+    gap: 20px;
+}
+.flex label{
+    margin-inline-end: 10px;
+    position: absolute;
+    color: var(--dark1);
+    font-weight: 600;
+    background: white;
+    padding: 0px 7px;
+    font-size: 0.7rem;
+    transform: translate(10px, -8px);
+}
+.sub2{
+    justify-content: flex-start;
+}
+.sub3{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mini{
+    width: 130px;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+.submit_data{
+    display: flex;
+    justify-content: flex-end;
+}
+.submit_data input{
+    padding: 12px 30px;
+    background: var(--blue);
+    border: none;
+    color: white;
+    margin-inline-end: 10px;
+    border-radius: 5px;
+}
+.submit_data input:hover, input:focus{
+    box-shadow: 0 0 10px 0 var(--shadow);
+    cursor: pointer;
+}
+.submit_data input[type=submit]:focus, input[type=submit]:hover{
+    box-shadow: 0 0 10px 0 var(--blue);
+    outline: none;
+    border: none;
+}
+.cancelbtn{
+    border: 1px solid var(--blue);
+    background: white;
+    padding: 9px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--blue);
+    position: relative;
+    bottom: 39px;
+    float: right;
+    margin-right: 160px;
+}
+.cancelbtn:hover{
+    box-shadow: none;
+    border: 1px solid var(--blue);
+    color: white;
+    background: var(--blue)
+}
+.title_form{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--blue);
+}
+.title_form > h3{
+    flex: 1;
+}
+.title_form > div > p{
+    text-align: center;
+    padding: 10px 30px;
+    margin-block-end: 10px;
+    margin-inline-end: 10px;
+}
+.title_form > div > .green{
+    color: rgb(48, 231, 48);
+    border: 1px solid rgb(48, 231, 48);
+}
+.title_form > div > .red{
+    color: rgb(231, 48, 48);
+    border: 1px solid rgb(231, 48, 48);
+}
+.cont_graph{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+.contentboxgraph{
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: white;
+    flex: 1;
+}
+.contentboxgraph h4{
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    background: var(--dark2);
+}
+.graphbox{
+    width: 100%;
+}
+.graphbox > div {
+    padding: 20px 15px;
+}
+#myChart{
+    width: 100% !important;
+}
+.loss_cont{
+    width: 100%;
+    margin-block-start: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.loss_graph{
+    width: 43%;
+}
+.loss_detail{
+
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: 0 0 20px 0 rgba(128, 128, 128, 0.158);
+    padding: 30px;
+}
+.loss_detail table{
+    border-collapse: collapse;  
+}
+.loss_detail table tr td, th{
+    padding: 12px 25px;
+}
