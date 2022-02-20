@@ -47,6 +47,15 @@ h4{
 #summary{
     background: rgb(255, 255, 255);
 }
+.brand{
+    width: 100px;
+}
+.brand img{
+    width: 150px;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+}
 .btn-add{
     display: inline-block;
     background: var(--blue);

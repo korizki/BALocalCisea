@@ -13,6 +13,9 @@
 </head>
 <body id="summary">
     <?php include "../codes/connection.php" ?>
+    <figure class="brand">
+        <img src="../assets/logo/logoptba.png" alt="logoptba">
+    </figure>
     <header>
         <h2>Operation Performance Evaluation</h2>
         <h3>Penambangan Swakelola</h3>
