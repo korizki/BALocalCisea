@@ -7,9 +7,9 @@ html{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 body{
-    font-family: 'Nunito', sans-serif;
     font-size: 14px;
 }
 a{
@@ -20,6 +20,8 @@ header{
     color: var(--dark2);
     text-align: center;
     padding: 10px;
+    border-bottom: 2px solid var(--blue);
+    
 }
 h1{
     font-size: 3rem;
@@ -51,20 +53,58 @@ h4{
     color: white;
     padding: 12px 20px;
     margin-block-end: 10px;
+    border-radius: 8px;
 }
-.btn-add:hover{
+.btn-add:hover, .btn-add:focus{
     box-shadow: 0 0 10px 0 var(--dark3);
+    border: none;
+    outline: none;
 }
 header{
     margin-block-end: 20px;
     padding: 20px;
     padding-bottom: 60px;
-    color: white;
     background-image: url("../illus/Wave.svg");
     background-position: 50% 15%;
 }
 header h2{
     color: var(--dark2);
+}
+.cont-date{
+    padding: 15px 30px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    width: 60%;
+    background: white;
+    box-shadow: 0 0 10px 0 rgba(170, 170, 170, 0.300);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: 20%;
+    margin-block-start: -60px;
+    font-weight: 0.8rem;
+    margin-block-end: 20px;
+    font-weight: 600;
+}
+.cont-date input{
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+}
+.cont-date > button{
+    background: var(--blue);
+    color: white;
+    padding: 9px 30px;
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    font-weight: 600;
+}
+.cont-date > button:hover, .cont-date >button:focus{
+    box-shadow: 0 0 10px 0 grey;
+    outline: none;
+    border: 1px solid var(--line);
+    cursor: pointer;
 }
 main{
     padding: 0px 30px;
@@ -128,7 +168,7 @@ main{
 }
 footer{
     background: var(--dark2);
-    padding: 15px;
+    padding: 20px;
     color: white;
     display: absolute;
     margin-top: 200px;
@@ -143,7 +183,6 @@ footer{
     top: 0;
     background: rgba(0, 0, 0, 0.589);
     display: none;
-    /* display: flex; */
     align-items: center;
 }
 .input_form{
@@ -151,7 +190,7 @@ footer{
     height: 730px;
     margin-inline-start: 10%;
     background: white;
-    padding: 30px 40px;
+    padding: 20px 40px;
     overflow: auto hidden;
     border-radius: 10px;
 }
@@ -315,15 +354,26 @@ textarea{
     width: 43%;
 }
 .loss_detail{
-
     border-radius: 12px;
     border: 1px solid var(--line);
+    border-top: 8px solid var(--dark2);
     box-shadow: 0 0 20px 0 rgba(128, 128, 128, 0.158);
     padding: 30px;
+    padding-block-start: 5px;
 }
 .loss_detail table{
-    border-collapse: collapse;  
+    border-collapse: collapse;
+}
+.loss_detail table th{
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--dark2);
 }
 .loss_detail table tr td, th{
     padding: 12px 25px;
+}
+.loss_detail table tr td:nth-child(2){
+    text-align: center;
+}
+.loss_detail table tbody tr:hover{
+    background: rgba(172, 172, 172, 0.123);
 }

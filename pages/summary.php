@@ -18,6 +18,15 @@
         <h3>Penambangan Swakelola</h3>
     </header>
     <main>
+        <div class="box-date">
+            <div class='cont-date'>
+                <label for="startdate">Tanggal Awal</label>
+                <input type="date" id="startdate" name="startdate">
+                <label for="enddate">Tanggal Akhir</label>
+                <input type="date" id="enddate" name="enddate">
+                <button type="submit" name="submitdate"><i class="fa fa-paper-plane" style="margin-inline-end: 8px;"></i>Submit</button>
+            </div>
+        </div>
         <div class="subContent">
             <div class="header_menu">
                 <h3>Produksi Swakelola</h3>
@@ -140,15 +149,15 @@
                                     datasets: [
                                         {
                                             label: "Rakor",
-                                            backgroundColor: "rgba(255, 99, 132, 0.6)",
-                                            borderColor: "rgba(255, 99, 132)",
+                                            backgroundColor: "rgba(255, 36, 36, 0.5)",
+                                            borderColor: "rgba(255, 36, 36)",
                                             borderWidth: 1,
                                             data: [12,13,19,20]
                                         },
                                         {
                                             label: "Realisasi",
-                                            backgroundColor: "rgba(153, 102, 255, 0.6)",
-                                            borderColor: "rgba(153, 102, 255)",
+                                            backgroundColor: "rgba(36, 255, 47, 0.5)",
+                                            borderColor: "rgba(36, 255, 47)",
                                             borderWidth: 1,
                                             data: [8,10,21,23]
                                         }
@@ -195,15 +204,15 @@
                                     datasets: [
                                         {
                                             label: "Rakor",
-                                            backgroundColor: "rgba(255, 99, 132, 0.6)",
-                                            borderColor: "rgba(255, 99, 132)",
+                                            backgroundColor: "rgba(255, 36, 36, 0.5)",
+                                            borderColor: "rgba(255, 36, 36)",
                                             borderWidth: 1,
                                             data: [12,13,19,22,20]
                                         },
                                         {
                                             label: "Realisasi",
-                                            backgroundColor: "rgba(153, 102, 255, 0.6)",
-                                            borderColor: "rgba(153, 102, 255)",
+                                            backgroundColor: "rgba(36, 255, 47, 0.5)",
+                                            borderColor: "rgba(36, 255, 47)",
                                             borderWidth: 1,
                                             data: [8,10,10,21,23]
                                         }
@@ -316,43 +325,43 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Breakdown</td>
+                                    <td><i class="fa fa-times-circle" style="margin-inline-end: 10px"></i>Breakdown</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Problem Engineering</td>
+                                    <td><i class="fa fa-exclamation-triangle" style="margin-inline-end: 10px"></i>Problem Engineering</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Problem Kelistrikan</td>
+                                    <td><i class="fa fa-bolt" style="margin-inline-end: 10px"></i>Problem Kelistrikan</td>
                                     <td>20</td>
                                 </tr>
                                  <tr>
-                                    <td>Move Equipment</td>
+                                    <td><i class="fa fa-arrows-alt" style="margin-inline-end: 10px"></i>Move Equipment</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Force Majeur</td>
+                                    <td><i class="fa fa-dumpster-fire" style="margin-inline-end: 10px"></i>Force Majeur</td>
                                     <td>20</td>
                                 </tr>
                                  <tr>
-                                    <td>Safety Talk</td>
+                                    <td><i class="fa fa-hard-hat" style="margin-inline-end: 10px"></i>Safety Talk</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Rest and Meal</td>
+                                    <td><i class="fa fa-utensils" style="margin-inline-end: 10px"></i>Rest and Meal</td>
                                     <td>20</td>
                                 </tr>
                                  <tr>
-                                    <td>Weather</td>
+                                    <td><i class="fa fa-cloud-rain" style="margin-inline-end: 10px"></i>Weather</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Wait Operator</td>
+                                    <td><i class="fa fa-pause-circle" style="margin-inline-end: 10px"></i>Wait Operator</td>
                                     <td>20</td>
                                 </tr>
                                 <tr>
-                                    <td>Slippery</td>
+                                    <td><i class="fa fa-snowflake" style="margin-inline-end: 10px"></i>Slippery</td>
                                     <td>20</td>
                                 </tr>
                             </tbody>
@@ -556,7 +565,7 @@
                         <div class="flex sub3">
                             <div class="supervisor" style="flex: 1">
                                 <label for="keterangan">Keterangan</label>
-                                <textarea id="keterangan" cols="30" rows="3" name="keterangan"></textarea>
+                                <textarea id="keterangan" cols="30" rows="2" name="keterangan" spellcheck="false"></textarea>
                             </div>
                         </div>
                     </div>
