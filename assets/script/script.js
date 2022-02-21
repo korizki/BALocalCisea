@@ -1,12 +1,23 @@
-// Memunculkan form input
+
+// Memunculkan form input produksi
 function hideForm(){
     const cont = document.querySelector(".input_cont");
     cont.style.display="none";
 }
-// Menyembunyikan Form Input 
+// Menyembunyikan Form Input produksi
 function showForm(){
     const cont= document.querySelector(".input_cont");
     cont.style.display="flex";
+}
+// Memunculkan form input losstime
+function hideFormProb(){
+    const cont_prob = document.querySelector(".input_cont_prob");
+    cont_prob.style.display="none";
+}
+// Menyembunyikan Form Input losstime
+function showFormProb(){
+    const cont_prob = document.querySelector(".input_cont_prob");
+    cont_prob.style.display="flex";
 }
 // Mendapatkan nilai hari dari input tanggal
 var myDays = ["Minggu", "Senin", "Selasa","Rabu","Kamis","Jumat","Sabtu"];
@@ -28,3 +39,4 @@ const hmAwal = document.getElementById('hm_awal');
 const hmAkhir = document.getElementById('hm_akhir');
 hmAkhir.addEventListener('input', getHours);
 hmAwal.addEventListener('input', getHours);
+

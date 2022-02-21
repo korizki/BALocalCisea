@@ -1,7 +1,7 @@
 <div class="input_cont">
     <div class="input_form">
         <div class="title_form">
-            <h3>Form Input Data</h3>
+            <h3>Form Input Data Produksi</h3>
             <div style="display: flex;">
                 <?php 
                     if(isset($_GET['status'])){
@@ -11,7 +11,8 @@
                                 cont.style.display='flex';
                             </script>";
                             echo "<p class='green'>Data berhasil disimpan.</p>";
-                        } else {
+                        };
+                        if($_GET['status'] =='failed'){
                             echo "<script>
                                 const cont= document.querySelector('.input_cont');
                                 cont.style.display='flex';
@@ -23,7 +24,7 @@
             </div>
         </div>
         <div class="content_input">
-            <form action="../codes/handleSubmit.php" method="post">
+            <form action="codes/handleSubmit.php" method="post">
                 <div class="sub_input">
                     <p>Sub 1</p>
                     <div class="flex">

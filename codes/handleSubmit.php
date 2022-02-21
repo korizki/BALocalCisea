@@ -41,14 +41,35 @@
       $jmrefuel = $_POST['jm_refuel'];
       $jarak = $_POST['jarak'];
       $keterangan = $_POST['keterangan'];
+      // query untuk simpan data ke database
+      $insertquery = mysqli_query($connection, "INSERT INTO t_epa VALUES(NULL, '$hari','$tanggal','$supervisor','$shift','$grup','$lokasi','$equipment','$ritase','$hmawal','$hmakhir','$hmoperasi','$jamoperasi','$jampenunjang','$jamlain','$breakdown','$nooperator','$hujan','$standby','$fuel','$bbmawal','$bbmakhir','$hmisi','$jmrefuel','$jarak','$keterangan')");
+      // Jika berhasil simpan data, maka memunculkan notif berhasil, dan form input dimunculkan kembali
+      if ($insertquery){
+          
+          header('Location: ../index.php?status=success');
+      } else {
+        header('Location: ../index..php?status=failed');
+      }
   }
-  // query untuk simpan data ke database
-  $insertquery = mysqli_query($connection, "INSERT INTO t_epa VALUES(NULL, '$hari','$tanggal','$supervisor','$shift','$grup','$lokasi','$equipment','$ritase','$hmawal','$hmakhir','$hmoperasi','$jamoperasi','$jampenunjang','$jamlain','$breakdown','$nooperator','$hujan','$standby','$fuel','$bbmawal','$bbmakhir','$hmisi','$jmrefuel','$jarak','$keterangan')");
-  // Jika berhasil simpan data, maka memunculkan notif berhasil, dan form input dimunculkan kembali
-  if ($insertquery){
-      
-      header('Location: ../pages/summary.php?status=success');
-  } else {
-    header('Location: ../pages/summary.php?status=failed');
+  if(isset($_POST['save_data_prob'])){
+    $tgl_prob = $_POST['tanggal_prob'];
+    $bd_prob = $_POST['bd_prob'];
+    $engine_prob = $_POST['engine_prob'];
+    $listrik_prob = $_POST['listrik_prob'];
+    $move_prob = $_POST['move_prob'];
+    $force_prob = $_POST['force_prob'];
+    $safety_prob = $_POST['safety_prob'];
+    $rest_prob = $_POST['rest_prob'];
+    $weather_prob = $_POST['weather_prob'];
+    $wait_prob = $_POST['wait_prob'];
+    $slippery_prob = $_POST['slippery_prob'];
+    // query save data ke database
+    $insertproblem = mysqli_query($connection, "INSERT INTO t_losstime VALUES (NULL, '$tgl_prob','$bd_prob','$engine_prob','$listrik_prob','$move_prob','$force_prob','$safety_prob','$rest_prob','$weather_prob','$wait_prob','$slippery_prob')");
+    // mengarahkan ke halaman setelah berhasil atau gagal simpan
+    if($insertproblem){
+      header('Location: ../index.php?status=problemsuccess');
+    } else {
+      header('Location: ../index.php?status=problemfailed');
+    }
   }
 ?>

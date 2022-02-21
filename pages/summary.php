@@ -33,7 +33,7 @@
         <div class="subContent">
             <div class="header_menu">
                 <h3>Produksi Swakelola</h3>
-                <a href="#" class="btn-add" onClick="showForm()"><i class="fa fa-plus" style="margin-inline-end: 8px;"></i>Tambah Data</a>
+                <!-- <a href="#" class="btn-add" onClick="showForm()"><i class="fa fa-plus" style="margin-inline-end: 8px;"></i>Tambah Data</a> -->
             </div>
             <div class="contentBox">
                 <div class="content">
@@ -278,7 +278,6 @@
             <p>&copy; Copyright PT. Bukit Asam (Persero) Tbk. 2022</p>
         </div>
     </footer>
-    <!-- Form Input Data -->
-    <?php include "sum_input.php"?>
+   
 </body>
 </html>

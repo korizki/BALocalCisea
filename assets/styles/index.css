@@ -44,6 +44,42 @@ h4{
     --line: rgba(128, 128, 128, 0.200);
     --shadow: rgba(80, 80, 80, 0.120);
 }
+#mainPage{
+    background-image: url('../illus/Wave.svg');
+}
+.container{
+    margin-block-start: 100px;
+    padding: 0 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+.container a{
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid var(--line);
+    box-shadow: 0 0 10px 0 var(--shadow);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    background: white;
+    filter: grayscale(100%);
+}
+.boxContainer h4{
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    background: var(--dark2);
+    border: 1px solid var(--line);
+}
+.container a:hover{
+    transform: translateY(-8px);
+    filter:grayscale(0);
+}
+.boxContainer figure{
+    padding: 10px;
+}
 #summary{
     background: rgb(255, 255, 255);
 }
@@ -206,7 +242,7 @@ footer{
 .footer_cont{
     text-align: center;
 }
-.input_cont{
+.input_cont, .input_cont_prob{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -214,6 +250,12 @@ footer{
     background: rgba(0, 0, 0, 0.589);
     display: none;
     align-items: center;
+}
+.input_cont_prob .form_problem{
+    width: 60%;
+    margin-inline-start: 20%;
+    padding: 40px 40px;
+    height: 700px;
 }
 .input_form{
     width: 80%;
@@ -226,6 +268,11 @@ footer{
 }
 .input_form h3{
     padding-bottom: 10px;
+}
+.prob_group{
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    
 }
 .sub_input{
     margin: 10px;
@@ -331,19 +378,21 @@ textarea{
 .title_form > h3{
     flex: 1;
 }
+
 .title_form > div > p{
     text-align: center;
     padding: 10px 30px;
     margin-block-end: 10px;
     margin-inline-end: 10px;
+    font-weight: 600;
 }
 .title_form > div > .green{
     color: rgb(48, 231, 48);
-    border: 1px solid rgb(48, 231, 48);
+    border: 2px solid rgb(48, 231, 48);
 }
 .title_form > div > .red{
     color: rgb(231, 48, 48);
-    border: 1px solid rgb(231, 48, 48);
+    border: 2px solid rgb(231, 48, 48);
 }
 .cont_graph{
     display: flex;
