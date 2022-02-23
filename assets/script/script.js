@@ -22,7 +22,7 @@ function showFormProb(){
 // Mendapatkan nilai hari dari input tanggal
 var myDays = ["Minggu", "Senin", "Selasa","Rabu","Kamis","Jumat","Sabtu"];
 const date = document.getElementById('tanggal');
-var dates = new Date(date)
+var dates = new Date(date);
 date.addEventListener('change', function(){
     var dates = new Date(date.value);
     const days = dates.getDay();

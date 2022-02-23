@@ -25,7 +25,7 @@
         <div class="flex container" >
             <a href="#" onClick="showForm()" id="box1">
                 <div class="boxContainer" >
-                    <h4><i class="fa fa-plus" style="margin-right: 10px"></i>Tambah Data Produksi</h4>
+                    <h4 style="background: rgb(35, 169, 187)"><i class="fa fa-plus" style="margin-right: 10px"></i>Tambah Data Produksi</h4>
                     <figure>
                         <img src="assets/illus/1.svg" alt="illustration">
                     </figure>
@@ -33,9 +33,17 @@
             </a>
             <a href="#" onClick="showFormProb()" id="box2">
                 <div class="boxContainer" >
-                    <h4><i class="fa fa-plus" style="margin-right: 10px"></i>Tambah Data Problem</h4>
+                    <h4 style="background: rgb(248, 43, 70)"><i class="fa fa-plus" style="margin-right: 10px"></i>Tambah Data Problem</h4>
                     <figure>
                         <img src="assets/illus/2.svg" alt="illustration">
+                    </figure>
+                </div>
+            </a>
+            <a href="pages/sum_input_bbm.php" target='_blank' id="box4">
+                <div class="boxContainer" >
+                    <h4 style="background: rgb(248, 171, 4); "><i class="fa fa-plus" style="margin-right: 10px"></i>Tambah Data BBM</h4>
+                    <figure>
+                        <img src="assets/illus/4.svg" alt="illustration">
                     </figure>
                 </div>
             </a>
@@ -53,7 +61,7 @@
     <?php include "pages/sum_input.php"?>
     <!-- Form Input Problem / Loss Time -->
     <?php include "pages/sum_input_loss.php" ?>
-    <footer style="margin-top: 140px">
+    <footer style="margin-top: 0px; position: absolute; bottom: 0px; width: 100%; z-index: -1;">
         <div class="footer_cont" >
             <p> Copyright &copy; 2022 PT. Bukit Asam (Persero) Tbk. </p>
         </div>

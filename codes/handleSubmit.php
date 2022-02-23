@@ -51,6 +51,7 @@
         header('Location: ../index..php?status=failed');
       }
   }
+  // handle save data Problem
   if(isset($_POST['save_data_prob'])){
     $tgl_prob = $_POST['tanggal_prob'];
     $bd_prob = $_POST['bd_prob'];
@@ -70,6 +71,33 @@
       header('Location: ../index.php?status=problemsuccess');
     } else {
       header('Location: ../index.php?status=problemfailed');
+    }
+  };
+
+  // Handle save data BBM
+  if(isset($_POST['save_data_bbm'])){
+    $bbm_userid = $_POST['bbm_userid'];
+    $bbm_petugas = $_POST['bbm_petugas'];
+    $bbm_restock = $_POST['bbm_restock'];
+    $bbm_floawal = $_POST['bbm_flowawal'];
+    $bbm_flowakhir = $_POST['bbm_flowakhir'];
+    $bbm_noid = $_POST['bbm_noid'];
+    $bbm_fueltruck = $_POST['bbm_fueltruck'];
+    // Sub II
+    $bbm_equipment = $_POST['bbm_equipment'];
+    $bbm_material = $_POST['bbm_material'];
+    $bbm_quantity = $_POST['bbm_quantity'];
+    $bbm_mread = $_POST['bbm_mread'];
+    $bbm_type = $_POST['bbm_type'];
+    $bbm_hmawal = $_POST['bbm_hmawal'];
+    $bbm_hmakhir = $_POST['bbm_hmakhir'];
+    // save to database
+    $insertbbm = mysqli_query($connection, "INSERT INTO t_bbm VALUES (NULL, '$bbm_fueltruck','$bbm_userid','$bbm_noid','$bbm_equipment','$bbm_material','$bbm_quantity','$bbm_mread','$bbm_type','$bbm_hmawal','$bbm_hmakhir','$bbm_petugas','$bbm_restock','$bbm_floawal','$bbm_flowakhir')");
+    // cek berhasil atau tidak dalam simpan data dan redirect
+    if($insertbbm){
+      header('Location: ../pages/sum_input_bbm.php?status=bbmsuccess');
+    } else {
+      header('Location: ../pages/sum_input_bbm.php?status=bbmfailed');
     }
   }
 ?>
