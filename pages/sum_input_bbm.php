@@ -63,15 +63,15 @@
                             </div>
                             <div class="date">
                                 <label for="bbm_restock">Restock</label>
-                                <input type="number" id="bbm_restock" name="bbm_restock" value="<?php echo $bbm_restock?>">
+                                <input class="mini" type="number" id="bbm_restock" name="bbm_restock" value="<?php echo $bbm_restock?>">
                             </div>
                             <div class="date">
                                 <label for="bbm_floawal">Flow Awal</label>
-                                <input type="number" id="bbm_flowawal" name="bbm_flowawal" value="<?php echo $bbm_flowawal?>">
+                                <input class="mini" type="number" id="bbm_flowawal" name="bbm_flowawal" value="<?php echo $bbm_flowawal?>">
                             </div>
                             <div class="date">
                                 <label for="bbm_flowakhir">Flow Akhir</label>
-                                <input type="number" id="bbm_flowakhir" name="bbm_flowakhir" value="<?php echo $bbm_flowakhir?>">
+                                <input class="mini" type="number" id="bbm_flowakhir" name="bbm_flowakhir" value="<?php echo $bbm_flowakhir?>">
                             </div>
                             <div class="date">
                                 <label for="bbm_noid">No. ID</label>
@@ -87,14 +87,6 @@
                                     <option value="FT 02" <?php echo ($bbm_fueltruck == "FT 02") ? "selected" : ""?>">FT 02</option>
                                 </select>
                             </div>
-                            <div style="margin-left: 100px !important; color: var(--blue);">
-                                <h4 id="textID">User ID : <?php echo $bbm_userid?></h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sub_input " style="margin-block-end: 20px">
-                        <p>Sub 2</p>
-                        <div class="flex sub2 prob_group" style="justify-content: flex-start !important">
                             <div class="supervisor">
                                 <label for="bbm_equipment">Equipment</label>
                                 <select value="-- Pilih Equipment --" name="bbm_equipment">
@@ -109,29 +101,38 @@
                                 ?>
                                 </select>
                             </div>
+                            <div style="margin-left: 100px !important; color: var(--blue);">
+                                <h4 id="textID">User ID : <?php echo $bbm_userid?></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub_input " style="margin-block-end: 20px">
+                        <p>Sub 2</p>
+                        <div class="flex sub2 prob_group" style="justify-content: flex-start !important">
+                            
                             <div class="supervisor">
                                 <label for="bbm_material">Material</label>
                                 <input type="text" step="any" id="bbm_material" name="bbm_material">
                             </div>
                             <div class="supervisor">
                                 <label for="bbm_quantity">Quantity</label>
-                                <input type="number" step="any" id="bbm_quantity" name="bbm_quantity">
+                                <input type="number" step="any" id="bbm_quantity" name="bbm_quantity" class="mini">
                             </div>
                             <div class="supervisor">
                                 <label for="bbm_mread">Meter Read</label>
-                                <input type="number" step="any" id="bbm_mread" name="bbm_mread">
+                                <input type="number" step="any" id="bbm_mread" name="bbm_mread" class="mini">
                             </div>
                             <div class="supervisor">
                                 <label for="bbm_type">Type </label>
-                                <input type="text" step="any" id="bbm_type" name="bbm_type">
+                                <input type="text" step="any" id="bbm_type" name="bbm_type" >
                             </div>
                             <div class="supervisor">
                                 <label for="bbm_hmawal">HM Awal</label>
-                                <input type="number" step="any" id="bbm_hmawal" name="bbm_hmawal">
+                                <input type="number" step="any" id="bbm_hmawal" name="bbm_hmawal" class="mini">
                             </div>
                             <div class="supervisor">
                                 <label for="bbm_hmakhir">HM Akhir</label>
-                                <input type="number" step="any" id="bbm_hmakhir" name="bbm_hmakhir">
+                                <input type="number" step="any" id="bbm_hmakhir" name="bbm_hmakhir" class="mini">
                             </div>  
                         </div>
                     </div>
