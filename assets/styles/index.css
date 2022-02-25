@@ -405,6 +405,10 @@ textarea{
     color: rgb(231, 48, 48);
     border: 2px solid rgb(231, 48, 48);
 }
+.title_form > div > .bluee{
+    color: var(--blue);
+    border: 2px solid var(--blue);
+}
 .cont_graph{
     display: flex;
     justify-content: center;
@@ -493,4 +497,16 @@ textarea{
 }
 .t_bbm >div>table>tbody>tr:hover{
     background: var(--shadow);
+}
+.exportbtn{
+    padding: 12px 20px;
+    background: var(--blue);
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.blue{
+    background: var(--blue);
+    
 }

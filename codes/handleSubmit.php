@@ -100,4 +100,21 @@
       header('Location: ../pages/sum_input_bbm.php?status=bbmfailed');
     }
   }
+
+  // export 
+  if(isset($_POST['exportFile'])){
+    $bbm_userid = "";
+    $bbm_userid = $_POST['bbm_userid'];
+    if($bbm_userid == ""){
+      $queryexport = mysqli_query($connection, "SELECT * FROM t_bbm INTO OUTFILE 'D:/export.csv' FIELDS TERMINATED BY ','");
+      if($queryexport){
+        header('Location: ../pages/sum_input_bbm.php?status=exportallsuccess');
+      }
+    } else {
+      $queryexport = mysqli_query($connection, "SELECT * FROM t_bbm WHERE user_id = '$bbm_userid' INTO OUTFILE 'D:/export.csv' FIELDS TERMINATED BY ','");
+      if($queryexport){
+        header('Location: ../pages/sum_input_bbm.php?status=exportidsuccess');
+      }
+    }
+  }
 ?>

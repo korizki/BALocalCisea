@@ -30,6 +30,18 @@
                                     const cont_bbm = document.querySelector('.input_cont_bbm');
                                 </script>";
                                 echo "<p class='red'>Data gagal disimpan, silahkan periksa kembali data!</p>";
+                            };
+                            if($_GET['status'] =='exportallsuccess'){
+                                echo "<script>
+                                    const cont_bbm = document.querySelector('.input_cont_bbm');
+                                </script>";
+                                echo "<p class='bluee'>Export file berhasil, file 'export.csv' pada Drive D:/</p>";
+                            }
+                            if($_GET['status'] =='exportidsuccess'){
+                                echo "<script>
+                                    const cont_bbm = document.querySelector('.input_cont_bbm');
+                                </script>";
+                                echo "<p class='bluee'>Export file berhasil, file 'export.csv' pada Drive D:/</p>";
                             }
                         }
                     ?>
@@ -80,11 +92,11 @@
                             <div class="date">
                                 <label for="bbm_fueltruck">Fuel Truck</label>
                                 <select name="bbm_fueltruck" id="bbm_fueltruck">
-                                    <option value="" disabled >-- Pilih Fuel Truck--</option>
-                                    <option value="FTP 01" <?php echo ($bbm_fueltruck == "FTP 01") ? "selected" : ""?>">FTP 01</option>
-                                    <option value="FTP 02" <?php echo ($bbm_fueltruck == "FTP 02") ? "selected" : "" ?>">FTP 02</option>
-                                    <option value="FT 01" <?php ($bbm_fueltruck == "FT 01") ? "selected" : "" ?>">FT 01</option>
-                                    <option value="FT 02" <?php echo ($bbm_fueltruck == "FT 02") ? "selected" : ""?>">FT 02</option>
+                                    <option value="" disabled selected >-- Pilih Fuel Truck--</option>
+                                    <option value="FTP 01" <?php echo ($bbm_fueltruck == "FTP 01") ? "selected" : ""?>>FTP 01</option>
+                                    <option value="FTP 02" <?php echo ($bbm_fueltruck == "FTP 02") ? "selected" : "" ?>>FTP 02</option>
+                                    <option value="FT 01" <?php ($bbm_fueltruck == "FT 01") ? "selected" : "" ?>>FT 01</option>
+                                    <option value="FT 02" <?php echo ($bbm_fueltruck == "FT 02") ? "selected" : ""?>>FT 02</option>
                                 </select>
                             </div>
                             <div class="supervisor">
@@ -101,8 +113,11 @@
                                 ?>
                                 </select>
                             </div>
-                            <div style="margin-left: 100px !important; color: var(--blue);">
+                            <div style="margin-left: 30px !important; color: var(--blue);">
                                 <h4 id="textID">User ID : <?php echo $bbm_userid?></h4>
+                            </div>
+                            <div>
+                                <a href="../codes/export.php" class="exportbtn" name="exportFile"> <i class="fa fa-file-export" style="margin-inline-end: 8px"></i>Export to CSV</a>
                             </div>
                         </div>
                     </div>
