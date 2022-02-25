@@ -67,7 +67,7 @@
                         <div class="flex" style="flex-wrap: wrap; align-items: center">
                             <div class="date">
                                 <label for="bbm_userid">User ID</label>
-                                <input type="text" id="bbm_userid" name="bbm_userid" value="<?php echo $bbm_userid?>">
+                                <input type="text" id="bbm_userid" name="bbm_userid" class="mini" value="<?php echo $bbm_userid?>">
                             </div>
                             <div class="date">
                                 <label for="bbm_petugas">Petugas</label>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="date">
                                 <label for="bbm_noid">No. ID</label>
-                                <input type="text" id="bbm_noid" name="bbm_noid" class="mini" value="<?php echo $bbm_noid?>">
+                                <input type="text" id="bbm_noid" name="bbm_noid" value="<?php echo $bbm_noid?>">
                             </div>
                             <div class="date">
                                 <label for="bbm_fueltruck">Fuel Truck</label>
@@ -114,7 +114,7 @@
                                 </select>
                             </div>
                             <div style="margin-left: 30px !important; color: var(--blue);">
-                                <h4 id="textID">User ID : <?php echo $bbm_userid?></h4>
+                                <h4 id="textID">User ID : <?php echo $bbm_noid?></h4>
                             </div>
                             <div>
                                 <a href="../codes/export.php" class="exportbtn" name="exportFile"> <i class="fa fa-file-export" style="margin-inline-end: 8px"></i>Export to CSV</a>
