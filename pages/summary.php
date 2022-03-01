@@ -13,6 +13,7 @@
 </head>
 <body id="summary">
     <?php include "../codes/connection.php" ?>
+    <?php include "../codes/queryReport.php" ?>
     <figure class="brand">
         <img src="../assets/logo/logoptba.png" alt="logoptba">
     </figure>
@@ -22,13 +23,15 @@
     </header>
     <main>
         <div class="box-date">
-            <div class='cont-date'>
-                <label for="startdate">Tanggal Awal</label>
-                <input type="date" id="startdate" name="startdate">
-                <label for="enddate">Tanggal Akhir</label>
-                <input type="date" id="enddate" name="enddate">
-                <button type="submit" name="submitdate"><i class="fa fa-paper-plane" style="margin-inline-end: 8px;"></i>Submit</button>
-            </div>
+            <form action="summary.php" method="get">
+                <div class='cont-date'>
+                    <label for="startdate">Tanggal Awal</label>
+                    <input type="date" id="startdate" name="startdate" value="<?php echo $start_date ?>">
+                    <label for="enddate">Tanggal Akhir</label>
+                    <input type="date" id="enddate" name="enddate" value="<?php echo $end_date ?>">
+                    <button type="submit" name="submitdate"><i class="fa fa-paper-plane" style="margin-inline-end: 8px;"></i>Submit</button>
+                </div>
+            </form>
         </div>
         <div class="subContent">
             <div class="header_menu">
@@ -146,15 +149,21 @@
                     <script>
                         const labels3 = [
                             'Breakdown',
-                            'Problem Engineering',
-                            'Problem Kelistrikan',
-                            'Move Equipment',
+                            'Agreement',
                             'Force Majeur',
-                            'Safety Talk',
-                            'Rest and Meal',
                             'Weather',
+                            'Problem Engineering',
+                            'Safety Talk',
+                            'Dust',
                             'Wait Operator',
+                            'Wait Equipment',
+                            'Problem Kelistrikan',
+                            'Rest and Meal',
                             'Slippery',
+                            'Change Shift',
+                            'Wait Blast',
+                            'Pray',
+                            'Move Equipment',
                         ];
 
                         const data3 = {
@@ -172,7 +181,13 @@
                                     "rgba(156, 15, 72, 0.6)",
                                     "rgba(154, 208, 236, 0.6)",
                                     "rgba(137, 70, 166, 0.6)",
-                                    "rgba(206, 123, 176, 0.6)"
+                                    "rgba(206, 123, 176, 0.6)",
+                                    "rgba(116, 23, 206, 0.6)",
+                                    "rgba(182, 123, 56, 0.6)",
+                                    "rgba(90, 200, 23, 0.6)",
+                                    "rgba(206, 11, 25, 0.6)",
+                                    "rgba(119, 20, 206, 0.6)",
+                                    "rgba(80, 123, 76, 0.6)",
                                     ],    
                                     borderColor: [
                                     "rgba(252, 79, 79)",
@@ -184,10 +199,16 @@
                                     "rgba(156, 15, 72)",
                                     "rgba(154, 208, 236)",
                                     "rgb(137, 70, 166)",
-                                    "rgba(206, 123, 176)"
+                                    "rgba(206, 123, 176)",
+                                    "rgba(116, 23, 206, 1)",
+                                    "rgba(182, 123, 56, 1)",
+                                    "rgba(90, 200, 23, 1)",
+                                    "rgba(206, 11, 25, 1)",
+                                    "rgba(119, 20, 206, 1)",
+                                    "rgba(80, 123, 76, 1)",
                                     ],
                                     borderWidth: 1,
-                                    data: [12,13,19,22,20, 12, 23, 11, 22]
+                                    data: [<?php echo $bd ?>,<?php echo $agree ?>,<?php echo $force ?>,<?php echo $weather?>,<?php echo $engine?>, <?php echo $safety ?>, <?php echo $dust ?>, <?php echo $waitopt ?>, <?php echo $waitequip ?>,<?php echo $listrik?>,<?php echo $rest ?>,<?php echo $slippery ?>,<?php echo $shift ?>,<?php echo $blast ?>,22,10]
                                 },
                             ]
                         };
@@ -228,44 +249,75 @@
                             <tbody>
                                 <tr>
                                     <td><i class="fa fa-times-circle" style="margin-inline-end: 10px"></i>Breakdown</td>
-                                    <td>20</td>
+                                    <td><?php echo $bd ?></td>
                                 </tr>
                                 <tr>
-                                    <td><i class="fa fa-exclamation-triangle" style="margin-inline-end: 10px"></i>Problem Engineering</td>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fa fa-bolt" style="margin-inline-end: 10px"></i>Problem Kelistrikan</td>
-                                    <td>20</td>
-                                </tr>
-                                 <tr>
-                                    <td><i class="fa fa-arrows-alt" style="margin-inline-end: 10px"></i>Move Equipment</td>
-                                    <td>20</td>
+                                    <td><i class="fa fa-clipboard-check" style="margin-inline-end: 10px"></i>Agreement</td>
+                                    <td><?php echo $agree ?></td>
                                 </tr>
                                 <tr>
                                     <td><i class="fa fa-dumpster-fire" style="margin-inline-end: 10px"></i>Force Majeur</td>
-                                    <td>20</td>
+                                    <td><?php echo $force ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-cloud-rain" style="margin-inline-end: 10px"></i>Weather</td>
+                                    <td><?php echo $weather ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-exclamation-triangle" style="margin-inline-end: 10px"></i>Problem Engineering</td>
+                                    <td><?php echo $engine ?></td>
                                 </tr>
                                  <tr>
                                     <td><i class="fa fa-hard-hat" style="margin-inline-end: 10px"></i>Safety Talk</td>
-                                    <td>20</td>
+                                    <td><?php echo $safety ?></td>
                                 </tr>
+                               
                                 <tr>
-                                    <td><i class="fa fa-utensils" style="margin-inline-end: 10px"></i>Rest and Meal</td>
-                                    <td>20</td>
-                                </tr>
-                                 <tr>
-                                    <td><i class="fa fa-cloud-rain" style="margin-inline-end: 10px"></i>Weather</td>
-                                    <td>20</td>
+                                    <td><i class="fa fa-eye-slash" style="margin-inline-end: 10px"></i>Dust</td>
+                                    <td><?php echo $dust ?></td>
                                 </tr>
                                 <tr>
                                     <td><i class="fa fa-pause-circle" style="margin-inline-end: 10px"></i>Wait Operator</td>
-                                    <td>20</td>
+                                    <td><?php echo $waitopt ?></td>
+                                </tr>
+                                 <tr>
+                                    <td><i class="fa fa-hand-paper" style="margin-inline-end: 10px"></i>Wait Equipment</td>
+                                    <td><?php echo $waitequip ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-bolt" style="margin-inline-end: 10px"></i>Problem Kelistrikan</td>
+                                    <td><?php echo $listrik ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-utensils" style="margin-inline-end: 10px"></i>Rest and Meal</td>
+                                    <td><?php echo $rest ?></td>
                                 </tr>
                                 <tr>
                                     <td><i class="fa fa-snowflake" style="margin-inline-end: 10px"></i>Slippery</td>
-                                    <td>20</td>
+                                    <td><?php echo $slippery ?></td>
                                 </tr>
+                                <tr>
+                                    <td><i class="fa fa-people-arrows" style="margin-inline-end: 10px"></i>Change Shift</td>
+                                    <td><?php echo $shift ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-fire" style="margin-inline-end: 10px"></i>Wait Blast</td>
+                                    <td><?php echo $blast ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa fa-mosque" style="margin-inline-end: 10px"></i>Pray</td>
+                                    <td></td>
+                                </tr>
+                                 <tr>
+                                    <td><i class="fa fa-arrows-alt" style="margin-inline-end: 10px"></i>Move Equipment</td>
+                                    <td></td>
+                                </tr>
+                                
+                                
+                                
+                                 
+                                
+                                
                             </tbody>
                         </table>
                     </article>

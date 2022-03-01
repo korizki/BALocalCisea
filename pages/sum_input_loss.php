@@ -83,7 +83,7 @@
                                 <option value="" selected disabled>-- Jenis Problem --</option>
                                 <?php
                                     include "../codes/connection.php";
-                                    $queryprob = mysqli_query($connection, "SELECT * FROM t_losscategory ORDER BY id ASC");
+                                    $queryprob = mysqli_query($connection, "SELECT * FROM t_losscategory ORDER BY id_cat ASC");
                                     while($rowprob = mysqli_fetch_array($queryprob)){
                                         ?>
                                         <option value="<?php echo $rowprob['obstacle']?>"><?php echo $rowprob['obstacle']?></option>
