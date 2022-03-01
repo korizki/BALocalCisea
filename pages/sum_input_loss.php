@@ -7,7 +7,7 @@
             <div>
                 <h3>Preview or Download All Data </h3>
                 <p>Anda bisa melihat semua data input loss time dan mendownload data dalam format .csv </p>
-                <p><a href="#"><i class="fa fa-search" style="margin-inline-end: 8px"></i>Preview Data</a>
+                <p><a href="pages/list_Losstime.php" target="_blank"><i class="fa fa-search" style="margin-inline-end: 8px"></i>Preview Data</a>
                 <a href="codes/exportLossTime.php"><i class="fa fa-download" style="margin-inline-end: 8px"></i>Download .csv</a></p>
                 <a class="attribute" href="https://storyset.com/business">Business illustrations by Storyset</a>
             </div>
