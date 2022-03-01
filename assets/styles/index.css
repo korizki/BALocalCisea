@@ -251,9 +251,6 @@ footer{
     display: none;
     align-items: center;
 }
-.input_cont_prob{
-    display: block;
-}
 .input_cont_bbm{
     background: none;
     background-image: url("../illus/Wave.svg");

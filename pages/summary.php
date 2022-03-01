@@ -186,7 +186,7 @@
                                     "rgba(182, 123, 56, 0.6)",
                                     "rgba(90, 200, 23, 0.6)",
                                     "rgba(206, 11, 25, 0.6)",
-                                    "rgba(119, 20, 206, 0.6)",
+                                    "rgba(50, 20, 111, 0.6)",
                                     "rgba(80, 123, 76, 0.6)",
                                     ],    
                                     borderColor: [
@@ -204,11 +204,11 @@
                                     "rgba(182, 123, 56, 1)",
                                     "rgba(90, 200, 23, 1)",
                                     "rgba(206, 11, 25, 1)",
-                                    "rgba(119, 20, 206, 1)",
+                                    "rgba(50, 20, 111, 1)",
                                     "rgba(80, 123, 76, 1)",
                                     ],
                                     borderWidth: 1,
-                                    data: [<?php echo $bd ?>,<?php echo $agree ?>,<?php echo $force ?>,<?php echo $weather?>,<?php echo $engine?>, <?php echo $safety ?>, <?php echo $dust ?>, <?php echo $waitopt ?>, <?php echo $waitequip ?>,<?php echo $listrik?>,<?php echo $rest ?>,<?php echo $slippery ?>,<?php echo $shift ?>,<?php echo $blast ?>,22,10]
+                                    data: [<?php echo $bd ?>,<?php echo $agree ?>,<?php echo $force ?>,<?php echo $weather?>,<?php echo $engine?>, <?php echo $safety ?>, <?php echo $dust ?>, <?php echo $waitopt ?>, <?php echo $waitequip ?>,<?php echo $listrik?>,<?php echo $rest ?>,<?php echo $slippery ?>,<?php echo $shift ?>,<?php echo $blast ?>,<?php echo $pray ?>,<?php echo $move ?>]
                                 },
                             ]
                         };
@@ -306,18 +306,13 @@
                                 </tr>
                                 <tr>
                                     <td><i class="fa fa-mosque" style="margin-inline-end: 10px"></i>Pray</td>
-                                    <td></td>
+                                    <td><?php echo $pray ?></td>
                                 </tr>
                                  <tr>
                                     <td><i class="fa fa-arrows-alt" style="margin-inline-end: 10px"></i>Move Equipment</td>
-                                    <td></td>
+                                    <td><?php echo $move ?></td>
                                 </tr>
-                                
-                                
-                                
-                                 
-                                
-                                
+        
                             </tbody>
                         </table>
                     </article>

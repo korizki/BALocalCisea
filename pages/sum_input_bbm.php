@@ -47,17 +47,16 @@
                     ?>
                 </div>
             </div>
-            <?php
-                
+            <?php                
                 $sqlbbm = mysqli_query($connection,"SELECT * from t_bbm ORDER BY no_trx DESC LIMIT 1");
                 $row = mysqli_fetch_array($sqlbbm);
-                $bbm_userid = $row['user_id'];
-                $bbm_petugas = $row['petugas'];
-                $bbm_restock = $row['restock'];
-                $bbm_flowawal = $row['flow_awal'];
-                $bbm_flowakhir = $row['flow_akhir'];
-                $bbm_noid = $row['no_id'];
-                $bbm_fueltruck = $row['fuel_truck'];
+                $bbm_userid = (empty($row['user_id'])) ? "" : $row['user_id'];
+                $bbm_petugas = (empty($row['petugas'])) ? "" : $row['petugas'];
+                $bbm_restock = (empty($row['restock'])) ? "" : $row['restock'];
+                $bbm_flowawal = (empty($row['flow_awal'])) ? "" : $row['flow_awal'];
+                $bbm_flowakhir = (empty($row['flow_akhir'])) ? "" : $row['flow_akhir'];
+                $bbm_noid = (empty($row['no_id'])) ? "" : $row['no_id'];
+                $bbm_fueltruck = (empty($row['fuel_truck'])) ? "" : $row['fuel_truck'];
             
             ?>
             <div class="content_input">

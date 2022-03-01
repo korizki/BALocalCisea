@@ -7,7 +7,8 @@
             <div>
                 <h3>Preview or Download All Data </h3>
                 <p>Anda bisa melihat semua data input loss time dan mendownload data dalam format .csv </p>
-                <p><a href="#"><i class="fa fa-search" style="margin-inline-end: 8px"></i>Preview Data</a><a href="#"><i class="fa fa-download" style="margin-inline-end: 8px"></i>Download .csv</a></p>
+                <p><a href="#"><i class="fa fa-search" style="margin-inline-end: 8px"></i>Preview Data</a>
+                <a href="codes/exportLossTime.php"><i class="fa fa-download" style="margin-inline-end: 8px"></i>Download .csv</a></p>
                 <a class="attribute" href="https://storyset.com/business">Business illustrations by Storyset</a>
             </div>
         </div>
@@ -91,6 +92,10 @@
                                     } 
                                 ?>
                             </select>
+                        </div>
+                        <div class="supervisor">
+                            <label for="keterangan">Keterangan</label>
+                            <input type="text" id="keterangan" name="keterangan" style="width: 400px;"required>
                         </div>
                     </div>
                 </div>

@@ -61,7 +61,7 @@
     // mengurangi 1 hari 
     $date_only = strtotime('-1 days', strtotime($start_prob));
     // mengambil nilai jam dari variabel start_prob
-    $time_ok = date('H', $time)."<br>";
+    $time_ok = date('H', $time);
     // jika kurang dari jam 6 pagi, maka berlaku 
     if($time_ok < 6){
       // date ok berisi nilai $date only (yang dikurang 1 hari sebelumnya)
@@ -69,7 +69,7 @@
     } else {
       $tgl_prob = new DateTime($start_prob);   
       $date_ok = $tgl_prob->format('Y-m-d'); 
-    }  
+    }
     $unit_prob = $_GET['unitse'];
     $end_prob = $_GET['end_time'];
     // membuat variabel durasi
@@ -82,9 +82,10 @@
     // pembulatan dua angka
     $durasi_ok = round($durasi, 2);
     $jenis_prob = $_GET['jenis_prob'];
+    $keterangan_prob = $_GET['keterangan'];
 
     // query save data ke database
-    $insertproblem = mysqli_query($connection, "INSERT INTO t_losstime VALUES (NULL, '$date_ok','$unit_prob','$start_prob','$end_prob','$durasi_ok','$jenis_prob')");
+    $insertproblem = mysqli_query($connection, "INSERT INTO t_losstime VALUES (NULL, '$date_ok','$unit_prob','$start_prob','$end_prob','$durasi_ok','$jenis_prob','$keterangan_prob')");
     // mengarahkan ke halaman setelah berhasil atau gagal simpan
     if($insertproblem){
       header('Location: ../index.php?status=problemsuccess');

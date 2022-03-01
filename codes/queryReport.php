@@ -88,5 +88,15 @@ $blast = mysqli_fetch_array($queryblast)['DURASIBLAST'];
 if($blast == ""){
     $blast = 0;
 }
+$querypray = mysqli_query($connection, "SELECT SUM(duration) AS DURASIPRAY FROM t_losstime INNER JOIN t_losscategory ON t_losscategory.obstacle = t_losstime.obstacle WHERE date BETWEEN '$start_date' AND '$end_date' AND category = 'Pray'");
+$pray = mysqli_fetch_array($querypray)['DURASIPRAY'];
+if($pray == ""){
+    $pray = 0;
+}
+$querymove = mysqli_query($connection, "SELECT SUM(duration) AS DURASIMOVE FROM t_losstime INNER JOIN t_losscategory ON t_losscategory.obstacle = t_losstime.obstacle WHERE date BETWEEN '$start_date' AND '$end_date' AND category = 'Move Equipment'");
+$move = mysqli_fetch_array($querymove)['DURASIMOVE'];
+if($move == ""){
+    $move = 0;
+}
 
 ?>
