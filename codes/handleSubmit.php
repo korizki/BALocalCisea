@@ -52,20 +52,39 @@
       }
   }
   // handle save data Problem
-  if(isset($_POST['save_data_prob'])){
-    $tgl_prob = $_POST['tanggal_prob'];
-    $bd_prob = $_POST['bd_prob'];
-    $engine_prob = $_POST['engine_prob'];
-    $listrik_prob = $_POST['listrik_prob'];
-    $move_prob = $_POST['move_prob'];
-    $force_prob = $_POST['force_prob'];
-    $safety_prob = $_POST['safety_prob'];
-    $rest_prob = $_POST['rest_prob'];
-    $weather_prob = $_POST['weather_prob'];
-    $wait_prob = $_POST['wait_prob'];
-    $slippery_prob = $_POST['slippery_prob'];
+  if(isset($_GET['save_data_prob'])){
+    $start_prob = "";
+    // mengambil tanggal problem 
+    $start_prob = $_GET['start_time'];
+    // mengubah tanggal menjadi format string
+    $time = strtotime($start_prob);
+    // mengurangi 1 hari 
+    $date_only = strtotime('-1 days', strtotime($start_prob));
+    // mengambil nilai jam dari variabel start_prob
+    $time_ok = date('H', $time)."<br>";
+    // jika kurang dari jam 6 pagi, maka berlaku 
+    if($time_ok < 6){
+      // date ok berisi nilai $date only (yang dikurang 1 hari sebelumnya)
+      $date_ok = date('Y-m-d', $date_only);
+    } else {
+      $tgl_prob = new DateTime($start_prob);   
+      $date_ok = $tgl_prob->format('Y-m-d'); 
+    }  
+    $unit_prob = $_GET['unitse'];
+    $end_prob = $_GET['end_time'];
+    // membuat variabel durasi
+    $durasi = "";
+    // mengambil nilai tanggal diubah ke string
+    $time_awal = strtotime($start_prob);
+    $time_akhir = strtotime($end_prob);
+    // selisih variabel waktu dibagi milisecond, second, dan menit
+    $durasi = ($time_akhir - $time_awal) / (60*60);
+    // pembulatan dua angka
+    $durasi_ok = round($durasi, 2);
+    $jenis_prob = $_GET['jenis_prob'];
+
     // query save data ke database
-    $insertproblem = mysqli_query($connection, "INSERT INTO t_losstime VALUES (NULL, '$tgl_prob','$bd_prob','$engine_prob','$listrik_prob','$move_prob','$force_prob','$safety_prob','$rest_prob','$weather_prob','$wait_prob','$slippery_prob')");
+    $insertproblem = mysqli_query($connection, "INSERT INTO t_losstime VALUES (NULL, '$date_ok','$unit_prob','$start_prob','$end_prob','$durasi_ok','$jenis_prob')");
     // mengarahkan ke halaman setelah berhasil atau gagal simpan
     if($insertproblem){
       header('Location: ../index.php?status=problemsuccess');

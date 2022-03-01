@@ -251,20 +251,24 @@ footer{
     display: none;
     align-items: center;
 }
+.input_cont_prob{
+    display: block;
+}
 .input_cont_bbm{
     background: none;
     background-image: url("../illus/Wave.svg");
     display: flex;
 }
+
 .form_bbm{
     border: 1px solid var(--line);
     box-shadow: 0 0 10px 0 var(--shadow);
     height: 98%;
     
 }
-.input_cont_prob .form_problem{
-    width: 60%;
-    margin-inline-start: 20%;
+.input_cont_prob > .form_problem{
+    width: 66%;
+    margin-inline-start: 17%;
     padding: 40px 40px;
     height: 700px;
 }
@@ -282,8 +286,8 @@ footer{
 }
 .prob_group{
     flex-wrap: wrap;
-    justify-content: space-between !important;
-    
+    justify-content: flex-start !important;
+    gap: 0;
 }
 .sub_input{
     margin: 10px;
@@ -392,8 +396,9 @@ textarea{
 
 .title_form > div > p{
     text-align: center;
-    padding: 10px 30px;
-    margin-block-end: 10px;
+    padding: 12px 30px;
+    margin-block-end: 15px;
+    margin-block-start: 10px;
     margin-inline-end: 10px;
     font-weight: 600;
 }
@@ -509,4 +514,48 @@ textarea{
 .blue{
     background: var(--blue);
     
+}
+.illustrationrep{
+    box-shadow: 0 0 10px 0 rgba(59, 59, 59, 0.192);
+    height: 210px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 15px;
+    gap: 30px;
+    transform: translateY(-10px);
+}
+.illustrationrep figure{
+    width: auto;
+}
+.illustrationrep div{
+    color: var(--blue);
+    flex: 1;
+    margin: 20px;
+}
+
+.illustrationrep div a{
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--blue);
+    color: white;
+    margin-right: 30px;
+    border-radius: 4px;
+}
+.illustrationrep div  a:hover{
+    box-shadow: 0 0 10px 0 rgba(7, 48, 75, 0.705);
+}
+.illustrationrep div .attribute{
+    font-size: 0.7rem;
+    background: none;
+    color: var(--blue);
+    padding: 0;
+    margin-block-start: 15px;
+}   
+.illustrationrep figure img{
+    object-fit: fill;
+    height: 100%;
+    flex: 1
 }
