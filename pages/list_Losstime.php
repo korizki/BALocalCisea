@@ -14,10 +14,16 @@
 <body >
     <?php include "../codes/connection.php"; ?>
     <?php 
-        $start_date = $_GET['startdate'];
-        $end_date = $_GET['enddate'];
-        (empty($start_date)) ? date('Y-m-d') : $_GET['startdate'];
-        (empty($end_date)) ? date('Y-m-d') : $_GET['enddate'];
+        if(isset($_GET['startdate'])){
+            $start_date = $_GET['startdate'];
+        } else {
+            $start_date = date('Y-m-d');
+        }
+        if(isset($_GET['enddate'])){
+            $end_date = $_GET['enddate'];
+        } else {
+            $end_date = date('Y-m-d');
+        }
     ?>
     <header class="headlistlosstime">
         <div>
@@ -35,10 +41,6 @@
                 </div>
             </form>
         </div>
-        <?php 
-            $start_date = $_GET['startdate'];
-            $end_date = $_GET['enddate'];
-        ?>
     </header>
     <main>
         <div class="box-losslist">
